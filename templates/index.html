@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2 align="center"> Subject list </h2>
+    <table class="table">
+    <thead class="table-warning">
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Subject</th>
+        <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for post in posts %}
+        <tr>
+        <th scope="row">{{post.id}}</th>
+        <td>{{post.name}}</td>
+        <td>{{post.desc}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}
